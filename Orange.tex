@@ -1,0 +1,172 @@
+
+\documentclass{book}
+
+
+\usepackage[latin1]{inputenc} 
+\usepackage[T1]{fontenc} 
+\usepackage[francais]{babel} 
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+
+
+
+\title{Modélisation numérique du théâtre antique d'Orange} 
+\author{Robin \bsc{Gueguen}} 
+\date{\today} 
+
+
+
+\begin{document} 
+
+\maketitle % Page de garde.
+ 
+\frontmatter % intro
+ \tableofcontents % Sommaire
+ 
+\chapter{Introduction}
+ 
+ Le théâtre antique d'Orange situé dans le Vaucluse est connu pour être un des mieux conservé du monde grâce à la préservation exceptionnelle de son mur de scène long de plus de 100m. Sa construction débuta en 40 av J-C sous le règne d'Auguste et fut menée par les vétérans de la II\up{e} légion gallique de César. Il dura près d'un siècle.
+ \\
+ 
+En 2014, dans le cadre du projet Numéro, les équipes d'archéologues de la Sorbonne s'associent l'UPMC et l'Institut des Sciences du Calcul et des Données (ISCD) pour virtualiser les fragments de frises retrouvés dans les décombres du théâtre. Le but de cette collaboration était la création d'un outil informatique permettant de manipuler des blocs de frises pour retrouver leur positionnement à la manière d'un puzzle.
+Suite à cette étude, il a été décidé d'aller plus loin dans la reconstitution en modelisant le théâtre dans son ensemble. L'objectif étant de pouvoir utiliser ce modèle numérique pour effectuer des calculs et des simulations notamment sur le plan acoustique. Une thèse de trois ans a donc débutée en 2015 dans cette optique.
+
+
+%-------------------------------------------------
+
+\mainmatter % Contenu
+
+\chapter{L'outil de modélisation logiciel} 
+
+\section{Généralités sur les méthodes de vitualisation} 
+
+% \subsection{Une sous-section} 
+
+
+Pour pouvoir étudier un monument dans ces moindres détails de nombreux chercheurs s'orientent aujourd'hui vers la modélisation 3D. Effectivement, jusqu'à présent les scientifiques menaient leurs études à l'aide de plans ou de dessins en 2D ou bien de maquette à échelle réduite. Mais les outils numériques disponibles aujourd'hui comportent de nombreux avantages par rapport à ces anciennes techniques. Tout d'abord, il est possible d'obtenir les mêmes informations qu'avec les "anciennes techniques" en terme de côtes, formes, aspect. Mais en plus, à partir d'un modèle numérique unique, on peut sélectionner les informations que l'on souhaite étudier tout simplement en changeant les objets à afficher, les vues ou les modes d'affichage. On peut par exemple afficher un monument par vu du dessus avec ses cotes et étudier le plan 2D correspondant. Mais on peut également réaliser une impression 3D pour en avoir une maquette à l'échelle réduite. Un seul outil permet donc d'obtenir l'ensemble des informations que l'on souhaitait acquérir par le passé. Un modèle numérique 3D peut par ailleurs être utilisé par des logiciels de calcul ou de simulation afin de tester des hypothèses physiques (écoulement de fluide, acoustique, ...) ou architecturale (portance, agencement de décor, ...). Il permet également de réaliser des animations (déplacement de personnages, ouverture de haut-vents, ...) ou des visites immersives grâce aux technologies de réalité virtuelle. 
+
+Il existe bien entendu de nombreuses limites à la numérisation 3D car cette technique est relativement récente et beaucoup de développement sont en cours. La principale contrainte est la puissance de calcul des ordinateurs et leur espace de stockage qui doivent prendre en charge de très grandes quantités de données.
+
+Pour virtualiser des monuments, il y a deux techniques principalement utilisées. La première consiste à réaliser un nuage de point à l'aide d'appareils de mesure (laser, appareils photo, ...) à la manière d'un scanner. Prenons l'exemple de la photogrammetrie qui est aujourd'hui largement répandue dans la restitution numérique de monument. Il s'agit de photographier l'ensemble du bâtiment sous tous ses angles en s'assurant que chaque photo a une partie commune avec une autre. Les logiciels de traitement peuvent alors corréler les photos les unes avec les autres et recréer l'image en trois dimensions. Cependant, la limite de cette technique est que plus la précision est grande, plus le volume de donnée à traiter est conséquent et rend les calculs difficiles. C'est pourquoi nous avons utiliser la deuxième méthode dite de CAO (conception assistée par Ordinateur). Il s'agit de retranscrire par des formes géométriques 3D plus ou moins complexes le monuments.
+
+
+\section{Blender} 
+
+Avant de commencer ce travail de modélisation il fut nécessaire de choisir l'outil approprié. De nombreux logiciel de CAO existe sur le marché tels que AutoCAD, CATIA, SketchUp, ... c'est finalement sur blender que le choix c'est porté pour les raisons suivantes :
+
+Blender est :
+
+\begin{itemize}
+
+\item gratuit
+\item multiplatforme 
+\item modulaire (de nombreuses fonctionnalité peuvent y être ajoutée selon les besoins)
+\item permet un rendu réaliste notamment grâce au texturage
+\item permet de réaliser des animations et des vidéos
+\item peut exporter les maillages sous différents formats couramment utilisés
+\item suivit et commenté par une large communauté
+\item permet le développement de script en python
+
+\end{itemize}
+
+Toutes ces spécificités vont être utilisées dans le projet et c'est pourquoi c'est ce logiciel qui a été choisi. Il comporte néanmoins quelques limites notamment la difficulté de prise en main, l'utilisation restreinte dans le milieu architectural et la faible qualité de rendu de son game engine (en comparaison aux moteurs Unity et Unreal par exemple). En ce qui concerne ce dernier point, cela n'est pas gênant car blender peut exporter des modèles texturés dans Unity ou Unreal pour des visite virtuelles de très haute qualité.
+
+\section{Les modificateurs (modifiers) utilisés} 
+
+La modélisation du théâtre d'Orange implique l'utilisation outils appartenant à Blender. Il s'agit de fonctionne mathématiques pré-établies qui permettent de modifier le maillage. Voici la description de ceux utilisé lors du projet :
+
+\subsection{Array}
+
+Le modifier Array permet de répéter n fois un objet en disposant les copies dans le repère absolu, le repère relatif à l'objet source ou bien par rapport à un objet tiers. Il est par exemple utilisé pour créer des escalier où la première marche est copiée ou bien des colonnes. Pour répéter l'objet selon une courbe, on peut lier le modifier à un objet vide (empty) qui aura subit une rotation.
+
+\subsection{Boolean}
+
+Le modifier Boolean permet des opérations d'addition, de soustraction ou d'intersection entre objets. Il est utilisé par exemple pour faire des trous pour les portes par exemple.
+
+\subsection{Mirror}
+
+Le modifier Mirror permet de reproduire en miroir un objet selon un axe par rapport au centre de l'objet. Le centre de symétrie peut également être un objet tiers.
+
+\subsection{Screw}
+
+Le modifier Screw permet d'étirer un maillage sans face afin de construire un objet circulaire autour d'un point de révolution. Cela sert par exemple à créer des gradins à partir du plan de coupe.
+
+\subsection{Solidify}
+
+Le modifier Solidify permet d'ajouter une épaisseur à une face. Cela sert par exemple à créer une marche à partir d'un plan de coupe.
+
+\subsection{Triangulate}
+
+Le modifier Triangulate permet de transformer toutes les faces en faces triangles (c'est à dire composées de trois points). Cela permet que faire des calculs sur des faces à trois points ce qui les simplifient considérablement.
+
+\subsection{Cloth}
+
+Le modifier Cloth permet de donner à un objet les paramètres physiques d'un tissu. Une fois définis des points d'accroche il est alors soumis à la gravité afin de prendre une forme réaliste. Lors d'animation il peut également bouger sous l'effet du vent par exemple. Cela peut par exemple servir à donner leur forme aux velum (toiles) suspendus au dessus des gradins.
+
+\subsection{Particle System}
+
+Le modifier Particule System permet de générer un grand nombre d'objets (copiés depuis un ou plusieurs objets sources) et de les répartir sur une surface. C'est grace à cela que l'on peut créer des cheveux par exemple ou bien une assemblée de spectateur.
+
+
+
+
+
+%-------------------------------------------------
+\chapter{Modélisation du théâtre} 
+
+Comme la plupart des théâtres construits à l'époque impériale, celui d'Orange est une construction unitaire composée d'une Cavea (gradins) demi-circulaire fermée au Nord par un mur de scène comportant de part et d'autres deux structures annexes appelées basiliques. L'étude se concentre sur le théâtre lui même et il ne sera pas représenté le porticus post scaenam ni le temple sur la partie occidentale. Nous représenterons néanmoins les substructures sur lesquels reposent l'édifices tels que l'Orchestra (l'orchestre) ou bien la colline Saint-Europe.
+Sur blender, les cotes sont référencés sous l'unité métrique et le centre de révolution de la Cavea est choisi au point (0,0) du plan XY. Sur l'axe Z, nous utilisons les relevés d'élévation (altitude par rapport au niveau de la mer correspondant à l'altitude 0 sur blender).
+
+Toute la modélisation se fait par rapport au document \cite{ref} qui présente une large étude de l'architecture du théâtre d'Orange en se basant sur des archives de la Médiathèque de l'architecture et du patrimoine à Charenton-le-Pont, les archives départementales de Vaucluse (Avignon) ainsi sur de nombreux relevés fait sur site.
+
+Le théâtre peut être découpé en différents sous-ensembles. Toutes les mesures présentes dans le document \cite{ref2} sont répercutées sur le modèle numérique. Si certaines cotes ne sont pas cohérentes entre elles, par exemple si une corniche sensée être à niveau présente deux élévations différentes, on prend toujours la plus éloigné de centre de l'objet. Cette hypothèse est faite car la dimension d'un objet ne peut que réduire avec le temps (pour les objets dit d'origine). Aussi, il est précisé dans ce document lorsqu'une hypothèse a été faite pour compléter les informations manquantes à l'élaboration du modèle numérique. 
+
+Les prochaines sections décrivent la logique de modélisation de chaque sous-ensemble.
+
+\section{Le mur de scène et ses basiliques}
+
+Le mur de scène ainsi que ses deux basiliques constituent un bloc distinct. Le contour extérieur est créé grâce aux cotes de la planche XXI \cite{ref2}. Ce bloc est disposé dans le repère absolu d'après les cotes indiquées sur le plan nord-sud par rapport au centre de révolution de la cavea. Sur le plan est-ouest, le mur de scène extérieur (la plus grande longueur) est centré en 0, les extrémités de chacune des basiliques sont donc à 51,96m du centre.
+
+Sont ensuite crées des objets représentant les pièces. A l'aide d'un modifier Boolean ces objets sont soustraits à la forme de base. La même méthode est utilisée pour le haut du mur qui supporte le toit (fig 24 \cite{ref},  pour les ouvertures sur le front de scène (planche XXIX \cite{ref2}), et pour les portes (planche XXI \cite{ref2}). Pour l'encastrement des poutres dans la partie sommitale du mur nous utilisons des poutres rectangulaire et identique car les traces décrites sur la planche XXXVII \cite{ref2} sont difficiles à interprétation. Cet élément pourra être corrigé par les archéologues dans une prochaine étape.
+
+\section{Le pulpitum et l'orchestra} 
+
+Le pultpitum, autrement dit l'estrade de scène a complètement disparu et a aujourd'hui été remplacé par un plancher moderne. Il reste néanmoins des traces sur le mur de scène qui permettent de le modéliser dans sa version antique. Les planches XLVII et XLIX \cite{ref2} donnent les élévations du pulpitum ainsi que de l'orchestre sure les extrémités orientales et occidentales. L'orchestre est une forme volumique dont la face supérieure représente le sol. Il sera dans une prochaine étape creusé à l'aide de modifiers Boolean pour l'hyposcaenium et le caniveau décrit dans une autre partie.
+
+\section{La colline Saint-Europe} 
+Comme souvent les architectes de l'époque ont adossé la cavea sur un relief naturel afin de solidifier la structure et de simplifier la construction de l'édifice. La colline Saint-Europe qui soutient donc le théâtre sur sa partie méridionale a été modélisée d'après les lignes d'altitude (référencées page 11 \cite{ref}) à partir de la plus basse jusqu'à la plus haute par pas de 6m par extrusion successive. Les élévation ont ensuite été légèrement adaptée (ligne par ligne) pour s'encastrer au mieux dans le théâtre. La colline est donc actuellement peu précise et il est nécessaire de l'affiner à l'aide d'un document détaillant mieux sa géométrie.
+
+\section{La cavea} 
+
+\section{Maenianum} 
+
+\section{Aditus} 
+
+\section{Porticus in summa cavea} 
+
+\section{Couverture des escaliers, des parascaenium et des basiliques} 
+
+\section{Les escaliers et passages des parascaenium au mur de scène} 
+
+\section{L'hyposcaenium et le caniveau} 
+Ceci n'a pas encore été modélisé.
+
+%-------------------------------------------------
+\chapter{Modélisation d'objets aléatoires ou mobiles} 
+
+\section{Le velum} 
+
+\section{Les arbres}
+
+\section{Les spectateurs}  
+
+\section{Le rideau de scène}  
+ 
+ Ceci n'a pas encore été modélisé.
+ 
+ %-------------------------------------------------
+\bibliographystyle{plain}
+\bibliography{Orange}
+
+\end{document} 
+
+

@@ -1,0 +1,30 @@
+\select@language {french}
+\contentsline {chapter}{Introduction}{iii}
+\contentsline {chapter}{\numberline {1}L'outil de mod\'elisation logiciel}{1}
+\contentsline {section}{\numberline {1.1}G\'en\'eralit\'es sur les m\'ethodes de vitualisation}{1}
+\contentsline {section}{\numberline {1.2}Blender}{1}
+\contentsline {section}{\numberline {1.3}Les modificateurs (modifiers) utilis\'es}{2}
+\contentsline {subsection}{\numberline {1.3.1}Array}{2}
+\contentsline {subsection}{\numberline {1.3.2}Boolean}{2}
+\contentsline {subsection}{\numberline {1.3.3}Mirror}{2}
+\contentsline {subsection}{\numberline {1.3.4}Screw}{2}
+\contentsline {subsection}{\numberline {1.3.5}Solidify}{2}
+\contentsline {subsection}{\numberline {1.3.6}Triangulate}{2}
+\contentsline {subsection}{\numberline {1.3.7}Cloth}{2}
+\contentsline {subsection}{\numberline {1.3.8}Particle System}{2}
+\contentsline {chapter}{\numberline {2}Mod\'elisation du th\'e\^atre}{3}
+\contentsline {section}{\numberline {2.1}Le mur de sc\`ene et ses basiliques}{3}
+\contentsline {section}{\numberline {2.2}Le pulpitum et l'orchestra}{3}
+\contentsline {section}{\numberline {2.3}La colline Saint-Europe}{4}
+\contentsline {section}{\numberline {2.4}La cavea}{4}
+\contentsline {section}{\numberline {2.5}Maenianum}{4}
+\contentsline {section}{\numberline {2.6}Aditus}{4}
+\contentsline {section}{\numberline {2.7}Porticus in summa cavea}{4}
+\contentsline {section}{\numberline {2.8}Couverture des escaliers, des parascaenium et des basiliques}{4}
+\contentsline {section}{\numberline {2.9}Les escaliers et passages des parascaenium au mur de sc\`ene}{4}
+\contentsline {section}{\numberline {2.10}L'hyposcaenium et le caniveau}{4}
+\contentsline {chapter}{\numberline {3}Mod\'elisation d'objets al\'eatoires ou mobiles}{5}
+\contentsline {section}{\numberline {3.1}Le velum}{5}
+\contentsline {section}{\numberline {3.2}Les arbres}{5}
+\contentsline {section}{\numberline {3.3}Les spectateurs}{5}
+\contentsline {section}{\numberline {3.4}Le rideau de sc\`ene}{5}
