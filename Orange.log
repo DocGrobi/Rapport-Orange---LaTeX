@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.18)  5 MAY 2017 11:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.18)  9 MAY 2017 17:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -103,6 +103,34 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen113
 \Gm@dimlist=\toks18
 )
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/05/09 v1.0r Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/01/02 v1.10 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 96.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count96
+))
+\Gin@req@height=\dimen114
+\Gin@req@width=\dimen115
+)
 (./Orange.aux)
 \openout1 = `Orange.aux'.
 
@@ -156,12 +184,70 @@ LaTeX Info: Redefining \up on input line 18.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+(/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count97
+\scratchdimen=\dimen116
+\scratchbox=\box26
+\nofMPsegments=\count98
+\nofMParguments=\count99
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count100
+\MPscratchDim=\dimen117
+\MPnumerator=\count101
+\makeMPintoPDFobject=\count102
+\everyMPtoPDFconversion=\toks20
+) (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2016/05/10 v0.21 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 20.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 20.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 20.
+
 [1
 
 
@@ -181,17 +267,29 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 ] [2
 
+] (./Orange.lof)
+\tf@lof=\write4
+\openout4 = `Orange.lof'.
+
+ [3] [4
+
+] (./Orange.lot)
+\tf@lot=\write5
+\openout5 = `Orange.lot'.
+
+ [5] [6
+
 ]
 
 LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <6.49994> not available
-(Font)              size <6> substituted on input line 27.
+(Font)              size <6> substituted on input line 29.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--29
+Underfull \hbox (badness 10000) in paragraph at lines 29--31
 
  []
 
-[3] [4
+[7] [8
 
 ]
 Chapitre 1.
@@ -201,26 +299,46 @@ Chapitre 1.
 Chapitre 2.
 [3
 
-] [4]
+] <images/gradinCoupe.png, id=55, 510.90875pt x 409.53pt>
+File: images/gradinCoupe.png Graphic file (type png)
+
+<use images/gradinCoupe.png>
+Package pdftex.def Info: images/gradinCoupe.png used on input line 151.
+(pdftex.def)             Requested size: 153.2738pt x 122.85994pt.
+
+<images/escaliers.png, id=57, 551.05875pt x 433.62pt>
+File: images/escaliers.png Graphic file (type png)
+
+<use images/escaliers.png>
+Package pdftex.def Info: images/escaliers.png used on input line 158.
+(pdftex.def)             Requested size: 165.3189pt x 130.087pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \vbox (badness 1028) has occurred while \output is active []
+
+ [4 <./images/gradinCoupe.png>] [5 <./images/escaliers.png>] [6
+
+]
 Chapitre 3.
-(./Orange.bbl [5
+(./Orange.bbl [7] [8
 
-] [6
-
-]) [7] (./Orange.aux)
+]) [9] (./Orange.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.49994pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 2145 strings out of 493014
- 28766 string characters out of 6133351
- 97545 words of memory out of 5000000
- 5699 multiletter control sequences out of 15000+600000
- 17122 words of font info for 37 fonts, out of 8000000 for 9000
+ 3377 strings out of 493014
+ 47311 string characters out of 6133351
+ 119827 words of memory out of 5000000
+ 6864 multiletter control sequences out of 15000+600000
+ 17795 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 28i,6n,30p,1487b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,6n,30p,1487b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></
 usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></us
@@ -228,16 +346,17 @@ r/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/
 local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/lo
 cal/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/loca
 l/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/
-texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/te
-xlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texl
-ive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texliv
-e/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/
-2016/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/20
-16/texmf-dist/fonts/type1/public/cm-super/sfsl1000.pfb>
-Output written on Orange.pdf (13 pages, 179033 bytes).
+texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb></usr/local/te
+xlive/2016/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texl
+ive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texliv
+e/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/
+2016/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/20
+16/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2016
+/texmf-dist/fonts/type1/public/cm-super/sfsl1000.pfb>
+Output written on Orange.pdf (19 pages, 1990414 bytes).
 PDF statistics:
- 96 PDF objects out of 1000 (max. 8388607)
- 68 compressed objects within 1 object stream
+ 124 PDF objects out of 1000 (max. 8388607)
+ 85 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

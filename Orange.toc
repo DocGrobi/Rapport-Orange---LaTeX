@@ -1,5 +1,5 @@
 \select@language {french}
-\contentsline {chapter}{Introduction}{iii}
+\contentsline {chapter}{Introduction}{vii}
 \contentsline {chapter}{\numberline {1}L'outil de mod\'elisation logiciel}{1}
 \contentsline {section}{\numberline {1.1}G\'en\'eralit\'es sur les m\'ethodes de vitualisation}{1}
 \contentsline {section}{\numberline {1.2}Blender}{1}
@@ -18,13 +18,13 @@
 \contentsline {section}{\numberline {2.3}La colline Saint-Europe}{4}
 \contentsline {section}{\numberline {2.4}La cavea}{4}
 \contentsline {section}{\numberline {2.5}Maenianum}{4}
-\contentsline {section}{\numberline {2.6}Aditus}{4}
-\contentsline {section}{\numberline {2.7}Porticus in summa cavea}{4}
-\contentsline {section}{\numberline {2.8}Couverture des escaliers, des parascaenium et des basiliques}{4}
-\contentsline {section}{\numberline {2.9}Les escaliers et passages des parascaenium au mur de sc\`ene}{4}
-\contentsline {section}{\numberline {2.10}L'hyposcaenium et le caniveau}{4}
-\contentsline {chapter}{\numberline {3}Mod\'elisation d'objets al\'eatoires ou mobiles}{5}
-\contentsline {section}{\numberline {3.1}Le velum}{5}
-\contentsline {section}{\numberline {3.2}Les arbres}{5}
-\contentsline {section}{\numberline {3.3}Les spectateurs}{5}
-\contentsline {section}{\numberline {3.4}Le rideau de sc\`ene}{5}
+\contentsline {section}{\numberline {2.6}Aditus}{5}
+\contentsline {section}{\numberline {2.7}Porticus in summa cavea}{5}
+\contentsline {section}{\numberline {2.8}Couverture des escaliers, des parascaenium et des basiliques}{5}
+\contentsline {section}{\numberline {2.9}Les escaliers int\'erieurs et passages des parascaenium au mur de sc\`ene}{5}
+\contentsline {section}{\numberline {2.10}L'hyposcaenium et le caniveau}{5}
+\contentsline {chapter}{\numberline {3}Mod\'elisation d'objets al\'eatoires ou mobiles}{7}
+\contentsline {section}{\numberline {3.1}Le velum}{7}
+\contentsline {section}{\numberline {3.2}Les arbres}{7}
+\contentsline {section}{\numberline {3.3}Les spectateurs}{7}
+\contentsline {section}{\numberline {3.4}Le rideau de sc\`ene}{7}

@@ -6,8 +6,8 @@
 \usepackage[T1]{fontenc} 
 \usepackage[francais]{babel} 
 \usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
-
-
+\usepackage{graphicx}
+\graphicspath{{images/}{figures/}}
 
 \title{Modélisation numérique du théâtre antique d'Orange} 
 \author{Robin \bsc{Gueguen}} 
@@ -20,7 +20,9 @@
 \maketitle % Page de garde.
  
 \frontmatter % intro
- \tableofcontents % Sommaire
+\tableofcontents % Sommaire
+\listoffigures % Table des figures.
+\listoftables % Liste des tableaux.
  
 \chapter{Introduction}
  
@@ -56,16 +58,14 @@ Avant de commencer ce travail de modélisation il fut nécessaire de choisir l'out
 Blender est :
 
 \begin{itemize}
-
-\item gratuit
-\item multiplatforme 
-\item modulaire (de nombreuses fonctionnalité peuvent y être ajoutée selon les besoins)
-\item permet un rendu réaliste notamment grâce au texturage
-\item permet de réaliser des animations et des vidéos
-\item peut exporter les maillages sous différents formats couramment utilisés
-\item suivit et commenté par une large communauté
-\item permet le développement de script en python
-
+	\item gratuit
+	\item multiplatforme 
+	\item modulaire (de nombreuses fonctionnalité peuvent y être ajoutée selon les besoins)
+	\item permet un rendu réaliste notamment grâce au texturage
+	\item permet de réaliser des animations et des vidéos
+	\item peut exporter les maillages sous différents formats couramment utilisés
+	\item suivit et commenté par une large communauté
+	\item permet le développement de script en python
 \end{itemize}
 
 Toutes ces spécificités vont être utilisées dans le projet et c'est pourquoi c'est ce logiciel qui a été choisi. Il comporte néanmoins quelques limites notamment la difficulté de prise en main, l'utilisation restreinte dans le milieu architectural et la faible qualité de rendu de son game engine (en comparaison aux moteurs Unity et Unreal par exemple). En ce qui concerne ce dernier point, cela n'est pas gênant car blender peut exporter des modèles texturés dans Unity ou Unreal pour des visite virtuelles de très haute qualité.
@@ -137,7 +137,27 @@ Comme souvent les architectes de l'époque ont adossé la cavea sur un relief natu
 
 \section{La cavea} 
 
+La cavea est la partie semi-circulaire adossée à la colline qui soutien les maenianum (gradins). Elle comporte des ambulacres qui permettent aux spectateurs d'atteindre leur siège par le biais de vomitorium et s'ouvre sur les rues extérieures par trois étages d'arcades. La modélisation se fait à partir de la planche LX \cite{ref2} en plaçant la bordure extérieure au même niveau que la bordure des basilique (c'est à dire à 51,96m du centre). Une fois le plan de coupe réalisé on utilise un modifier Screw pour faire une extrusion circulaire autour du centre. On comprend alors que les cotes de l'ensemble de la cavea sont celles de la coupe théorique. Sur cette planche certaines valeurs sont incohérentes et on utilise donc la règle décrite en introduction de cette partie pour choisir les bonne valeurs.
+Le troisième maenianum n'étant pas soutenu par la colline, il repose sur des caissons voûtés qui sont modélisés séparément. 
+
+Les arcades donnant sur l'extérieur sont répétées à l'aide d'un modifier Array puis soustraites à la cavea par un modifier Boolean. A noter que le modifier Screw doit être appliqué pour que le Boolean fonctionne.
+
 \section{Maenianum} 
+
+Les Maenianum sont modélisés à partir d'un plan de coupe d'un bloc formant un gradin auquel est appliqué un modifier Array (dupliquant du nombre de gradins) et d'un modifier Screw pour faire une extrusion de révolution. Le plan de base est un quasi-triangle représentant le profil d'un bloc rectangulaire coupé en deux. Il n'est pas coupé le long de la diagonale car une partie plate d'une dizaine de centimètre permet de faire reposer les bloc les une sur les autres. Cette forme est issue du document \cite{ref} où l'on retrouve "le seul gradin antique dont une face de joint est actuellement visible" figure \ref{coupeGradin}. C'est cette forme qui est ajustée pour coïncider avec les cotes de la cavea. Une fois les modifiers appliqués, on peut utiliser un nouveau modifier Boolean pour les marches d'escalier et les vomitorium. Les empruntes des escaliers qui seront retirés aux maenianum sont en fait la forme de base du maenianum retourné et placé de sorte que le coin supérieur (le bord du gradin) se retrouve au centre de la partie visible du gradin. Cela permet de retirer exactement la moitié de la hauteur et de la profondeur du gradin. La forme 2D de l'escalier est ensuite dupliqué avec le modifier Array et extrudé avec un modifier Solidify sur 1,2m. Cette valeur est prise arbitrairement par rapport aux plans non coté du document \cite{ref2} et devra être affinée par les experts.
+
+\begin{figure}[!h] %on ouvre l'environnement figure
+	\center
+	\includegraphics[scale=0.3]{gradinCoupe.png}
+	\caption{Le repose pied et le premier gradin du premier cuneus : vu de l'extrémité nord avec au premier plan, le mur bordant l'aditus est} %la légende
+	\label{coupeGradin} %l'étiquette pour faire référence à cette image	
+\end{figure} %on ferme l'environnement figure 
+
+\begin{figure}[!h] 
+	\center
+	\includegraphics[scale=0.3]{escaliers.png}
+	\caption{Modélisation des maenianum et de l'emprunte des escaliers à retirer apres application des modifers Array et Screw}
+\end{figure}
 
 \section{Aditus} 
 
@@ -145,7 +165,7 @@ Comme souvent les architectes de l'époque ont adossé la cavea sur un relief natu
 
 \section{Couverture des escaliers, des parascaenium et des basiliques} 
 
-\section{Les escaliers et passages des parascaenium au mur de scène} 
+\section{Les escaliers intérieurs et passages des parascaenium au mur de scène} 
 
 \section{L'hyposcaenium et le caniveau} 
 Ceci n'a pas encore été modélisé.
